@@ -1,8 +1,9 @@
-> # Potigol é ...
+> # Potigol is ...
 > Uma linguagem moderna (funcional) para aprender a programar.
+> A modern language (functional) to learn code computer.
 
 
-Experimente online: [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/635c2c25-4a9a-4f97-a258-594be811ef1b)
+Try it online: [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/635c2c25-4a9a-4f97-a258-594be811ef1b)
 
 
 
@@ -11,16 +12,17 @@ Experimente online: [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.s
 
 ---
 
-## Faça o *[Download](https://github.com/potigol/Potigol/releases)* e veja como *[Instalar](https://github.com/potigol/Potigol#como-usar)*
+## [Download](https://github.com/potigol/Potigol/releases)* and how *[Instalar](https://github.com/potigol/Potigol#como-usar)*
 
- - Siga-nos no twitter: *[@potigol](https://twitter.com/potigol)*
+ - Follow us on twitter: *[@potigol](https://twitter.com/potigol)*
 
- - [Exemplos de programas](https://potigol.github.io/URI-Potigol/) na Linguagem Potigol :new:
+ - [Examples of code](https://potigol.github.io/URI-Potigol/) in Language Potigol :new:
 
- - *[Experimente!](https://potigol.github.io/tente)* :new:
+ - *[Try it!](https://potigol.github.io/tente)* :new:
 
 
-Conheça também a biblioteca de jogos 2D [Jerimum](https://potigol.github.io/Jerimum/) :video_game:
+Meet too the library to make games in 2D [Jerimum](https://potigol.github.io/Jerimum/) :video_game:
+
 
 ## Características
  * Projetada para ser usada por alunos iniciantes
