@@ -24,53 +24,52 @@ Try it online: [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](
 Meet too the library to make games in 2D [Jerimum](https://potigol.github.io/Jerimum/) :video_game:
 
 
-## Características
- * Projetada para ser usada por alunos iniciantes
- * Tipagem estática com inferência de tipos
- * Palavras-chave em português
- * Multiparadigma
- * Estímulo ao paradigma funcional: valores imutáveis, casamento de padrões, funções como valores
+## Feature
+ * Created for to be used by beginning students 
+ * Static typing with type inference
+ * keywords in portuguese
+ * Mult paradigm
+ * Encouraging the functional paradigm: unchanging values, junction of functions, function like values
 
-## Como usar
-  - Baixe a versão mais recente do Potigol https://github.com/potigol/Potigol/releases/latest
-  - Descompacte o arquivo
-  - Para executar o Editor de Código digite no prompt do terminal
-
+## How to use
+  - Download the latest version fo Potigol https://github.com/potigol/Potigol/releases/latest
+  - Unzip the file
+  - To run Code Editor, type at the terminal prompt
+  
   ````java -jar epotigol.jar````
 
-  - No Windows basta executar `epotigol.bat`.
+  - Windows, just run `epotigol.bat`.
 
-  - Para executar um programa em Potigol digite no prompt do terminal
+  - To run a program in Potigol, type at the terminal prompt 
 
   ````java -jar potigol.jar arquivo.poti````
 
-  - No Windows basta usar `potigol arquivo.poti`.
+  - Windows, just run `potigol arquivo.poti`.
 
-Exemplos: https://github.com/potigol/Potigol/wiki/jogos
+Examples: https://github.com/potigol/Potigol/wiki/jogos
 
-## A Linguagem
+## The Language
 
-### Variáveis
+### Variables
 ````scala
-x = 10                 # Declaração de um valor fixo (não pode ser alterado)
-y, z = 20              # Mais de uma variável recebe o mesmo valor y = 20 e z = 20
-a, b, c = 1, 2, 3      # Declaração paralela: a = 1, b = 2 e c = 3
-
-var y := 10            # Declaração de uma variável alterável
-y := y + 2             # Atribuição de um valor a uma variável
-var a, b, c := 1, 2, 3 # Declaração paralela: var a := 1, var b := 2 e var c := 3
-a, b, c := b, a, 4     # Atribuição paralela: a := 2, b := 1 e c := 4
+x = 10                 # Declaration of a fixed value (don't be changed)
+y, z = 20              # Many variables receive a same value y = 20 and z = 20
+a, b, c = 1, 2, 3      # Parallel declaration: a = 1, b = 2 e c = 3
+var y := 10            # Declaration of a changeable variable
+y := y + 2             # Assigning of a value for a variable
+var a, b, c := 1, 2, 3 # Parallel declaration: var a := 1, var b := 2 e var c := 3
+a, b, c := b, a, 4     # Assigning paralela: a := 2, b := 1 e c := 4
 ````
 
-### Tipos Básicos
+### Tipes Basics
 
-| Tipo | Valores |
+| Type | Values |
 | --- | --- |
-| Inteiro | `-4`, `0`, `5`, ... |
-| Real | `-7.23`, `0.0`, `5.25`, ... |
-| Texto | `"texto"`, `"ola"`, `"mundo"`, ... |
-| Lógico | `verdadeiro` e `falso` |
-| Caractere | `'a'`, `'4'`, `'&'`, ... |
+| Integer | `-4`, `0`, `5`, ... |
+| Float | `-7.23`, `0.0`, `5.25`, ... |
+| String | `"text"`, `"hello"`, `"world"`, ... |
+| Logic | `true` and `false` |
+| Character | `'a'`, `'4'`, `'&'`, ... |
 
 
 ### Operações Aritméticas
