@@ -72,160 +72,161 @@ a, b, c := b, a, 4     # Assigning paralela: a := 2, b := 1 e c := 4
 | Character | `'a'`, `'4'`, `'&'`, ... |
 
 
-### Operações Aritméticas
+### Arithmetic Operations
 ````scala
-5 + 3         # Soma: 8
-5 - 3         # Subtração: 2
-5 * 3         # Multiplicação: 15
-5 / 3         # Divisão real: 1.66667
-5 div 3       # Divisão inteira: 1
-5 mod 3       # Resto da divisão: 2
+5 + 3         # Sum: 8
+5 - 3         # Subtration: 2
+5 * 3         # Multiply: 15
+5 / 3         # Float division: 1.66667
+5 div 3       # Integer division: 1
+5 mod 3       # Rest of division: 2
 ````
 
-### Operações Lógicas e Relacionais
+### Logic Operations and Relational
 ````scala
-# Valores lógicos: verdadeiro, falso
-verdadeiro e falso                    # e lógico              : falso
-verdadeiro ou falso                   # ou lógico             : verdadeiro
-não verdadeiro                        # não lógico            : falso
+# Logic Values: true, false
+true and false                        # and logic             : false
+verdadeiro ou falso                   # or logic              : true
+not true                              # not logic             : false
 
-2 == 3                                # teste de igualdade    : falso
-2 <> 3                                # teste de desigualdade : verdadeiro
-2 < 3                                 # menor                 : verdadeiro
-2 <= 3                                # menor ou igual        : verdadeiro
-2 > 3                                 # maior                 : falso
-2 >= 3                                # maior ou igual        : falso
+2 == 3                                # test of equal         : false
+2 <> 3                                # teste de unequal      : true
+2 < 3                                 # less                  : true
+2 <= 3                                # less than or equal to : true
+2 > 3                                 # greater               : true
+2 >= 3                                # greater than or equal to : false
 ````
 
 
-### Entrada
+### Input
 ````scala
-a = leia_inteiro                # lê um número inteiro do teclado
-b = leia_real                   # lê um número real do teclado
-c = leia_texto                  # lê um texto do teclado
-x, y = leia_inteiro             # lê 2 inteiros, o mesmo que x = leia_inteiro, y = leia_inteiro
-números = leia_inteiros(5)      # lê um lista de 5 números inteiros, um por linha
-números = leia_inteiros(",")    # lê uma lista de números inteiros separados por vírgula
+a = leia_inteiro                # read a integer number typed of keyboard
+b = leia_real                   # read a float number typed of keyboard
+c = leia_texto                  # read a text/string typed of keyboard
+x, y = leia_inteiro             # read two integer numbers, this is same that x = leia_inteiro, y = leia_inteiro
+numbers = leia_inteiros(5)      # read a list of five integer numbers, one by line
+numbers = leia_inteiros(",")    # read a list of integer numbers, comma separated
 ````
 
-### Saída
+### Output
 ````ruby
-escreva "Olá Mundo"   # Escreve e passa para a próxima linha
-imprima "Olá "        # Escreve e continua na mesma linha
-escreva "Mundo"
+escreva "Hello World"   # write and pass to next line
+imprima "Hello "        # write and continue in the same line
+escreva "World"
 
-nome = "Mundo"
-escreva "Olá {nome}!"  # "Olá Mundo!"
+name = "World"
+escreva "Hello {name}!"  # "Hello World!"
 ````
 
-### Se
+### If
 ````scala
 x = leia_inteiro
 
 # se ... então ... fim
 se x > 5 então
-  escreva "Maior do que cinco."
+  escreva "greater than five."
 fim
 
 # se ... então ... senão ... fim
 se x > 5 então
-  escreva "Maior do que cinco."
+  escreva "greater than five."
 senão
-  escreva "Menor ou igual a cinco."
+  escreva "less than or equal to five."
 fim
 
-se verdadeiro então                # escreva "verdadeiro"
-  escreva "verdadeiro"
+se verdadeiro então                # write "true"
+  escreva "true"
 senão
-  escreva "falso"
+  escreva "false"
 fim
 
-se falso então                     # escreva "falso"
-  escreva "verdadeiro"
+se falso então                     # write "false"
+  escreva "true"
 senão
-  escreva "falso"
+  escreva "false"
 fim
 
 # se ... então ... senãose ... senão ... fim
 se x > 8 então
-  escreva "Maior do que oito."
+  escreva "greater than eight."
 senãose x > 6 então
-  escreva "Maior do que seis."
+  escreva "greater than six."
 senãose x > 4 então
-  escreva "Maior do que quatro."
+  escreva "greater than four."
 senãose x > 2 então
-  escreva "Maior do que dois."
+  escreva "greater than two."
 senão
-  escreva "Menor ou igual a dois."
+  escreva "less than or equal to two."
 fim
 
-# usando se como uma expressão
-a = se x mod 2 == 0 então "par" senão "ímpar" fim
+# using se how a expression
+a = se x mod 2 == 0 então "even" senão "odd" fim
 
-maior = se a >= b e a >= c então a senãose b > c então b senão c fim
+greater = se a >= b e a >= c então a senãose b > c então b senão c fim
 ````
 
-### Escolha
+### Escolha (Choice, Case)
 ````scala
 x = leia_inteiro
 escolha x
-  caso 1 => escreva "Um"               # se x == 1
-  caso 2 => escreva "Dois"             # se x <> 1 e x == 2
-  caso 3 => escreva "Três"             # se x <> 1 e x <> 2 e x == 3
-  caso _ => escreva "Outro valor"      # se x <> 1 e x <> 2 e x <> 3
+  caso 1 => escreva "One"                # se x == 1
+  caso 2 => escreva "Two"                # se x <> 1 e x == 2
+  caso 3 => escreva "Three"              # se x <> 1 e x <> 2 e x == 3
+  caso _ => escreva "Another value"      # se x <> 1 e x <> 2 e x <> 3
 fim
 
-# escolha com condições
+# Escolha (Choice) with conditions
 escolha x
-  caso n se n < 0        => escreva "{n} é negativo"
-  caso n se n mod 2 == 0 => escreva "{n} é par"
-  caso n                 => escreva "{n} é ímpar"
+  caso n se n < 0        => escreva "{n} is negative"
+  caso n se n mod 2 == 0 => escreva "{n} is even"
+  caso n                 => escreva "{n} is odd"
 fim
 
-# usando escolha como uma expressão
+# using Escolha (Choice) how a expression
 é_zero = escolha x
   caso 0 => verdadeiro
   caso _ => falso
 fim
 
-sinal = escolha x               # escolha retorna um número: -1, 0 ou 1
+sinal = escolha x               # escolha (choice) retorn a number: -1, 0 or 1
   caso n se n < 0 => -1
   caso n se n > 0 =>  1
   caso _          =>  0
 fim
 ````
 
-### Repetição: Para
+### Repetion: Para (For)
 ````scala
-para i de 1 até 10 faça            # escreve os números de 1 a 10
+para i de 1 até 10 faça            # write the numbers 1 to 10
   escreva i
 fim
 
-var soma := 0
-para i de 1 até 10 faça            # soma os números de 1 a 10
-  soma := soma + i
+var sum := 0
+para i de 1 até 10 faça            # sum the numbers 1 to 10
+  sum := sum + i
 fim
-escreva "A soma é {soma}."
+escreva "The sum is {sum}."
 
-para i de 1 até 10 passo 2 faça    # escreve os números ímpares de 1 a 10
+para i de 1 até 10 passo 2 faça    # write the odd numbers 1 to 10
   escreva i
 fim
 
-# Para decrescente
-para i de 10 até 1 passo -1 faça   # escreve os números de 10 a 1
+# Para (For) decreasing numbers
+para i de 10 até 1 passo -1 faça   # write numbers 10 to 1
   escreva i
 fim
 
-# Para com mais de um gerador
+# Para with more one generator
 para i de 1 até 4,
-     j de 1 até 3 faça             # escreve a tabuada {1..4} x {1..3}
+     j de 1 até 3 faça             # write multiplication
+     escreve a tabuada {1..4} x {1..3}
   escreva "{i} * {j} == {i * j}"
 fim
 
-# Para com listas
-cores = ["azul", vermelho", "verde"]
-para cor em cores faça
-  escreva cor
+# Para (For) with lists
+colors = ["blue", "red", "green"]
+para color em colors faça
+  escreva color
 fim
 
 # Para gerando uma lista
