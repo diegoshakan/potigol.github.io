@@ -207,7 +207,7 @@ para i de 1 até 10 faça            # sum the numbers 1 to 10
 fim
 escreva "The sum is {sum}."
 
-para i de 1 até 10 passo 2 faça    # write the odd numbers 1 to 10
+para i de 1 até 10 passo 2 faça    # write odd numbers 1 to 10
   escreva i
 fim
 
@@ -229,58 +229,58 @@ para color em colors faça
   escreva color
 fim
 
-# Para gerando uma lista
-numeros = para i de 1 até 5 gere i fim             # [1, 2, 3, 4, 5]
+# Para generate a list
+numbers = para i de 1 até 5 gere i fim             # [1, 2, 3, 4, 5]
 
-pares = para i de 1 até 10 se i mod 2 == 0 gere i  # [2, 4, 5, 6, 8, 10]
+even = para i de 1 até 10 se i mod 2 == 0 gere i  # [2, 4, 5, 6, 8, 10]
 
 ````
 
-### Repetição: Enquanto
+### Repetition: Enquanto (When)
 ````scala
 var i := 0
-enquanto i<=10 faça                 # Escreve os números de 1 a 10
+enquanto i<=10 faça                 # Write numbers of 1 to 10
   escreva i
   i := i + 1
 fim
 ````
 
-### Funções
+### Functions
 ````scala
-soma(x: Inteiro, y: Inteiro) = x + y    # Declaração de função em uma linha
+sum(x: Inteiro, y: Inteiro) = x + y    # Declaration of a function in one line
 
-soma(x, y: Inteiro) = x + y             # Agrupando parâmetros do mesmo tipo
+sum(x, y: Inteiro) = x + y             # Grouping params of the same type
 
-rep(a: Texto, n: Inteiro) = a * n       # Funções com parâmetros de tipos diferentes
+rep(a: Texto, n: Inteiro) = a * n      # Functions with params of differents types
 
 a, b = leia_inteiro
-c = soma(a, b)                          # Aplicando a função
+c = sum(a, b)                          # Apply the function
 escreva "{a} + {b} = {c}"
 
-soma(x, y: Inteiro): Inteiro = x + y    # O tipo de retorno pode ser definido explicitamente
+sum(x, y: Inteiro): Inteiro = x + y    # The type of return can be defined explicitly
 
-soma(x, y: Inteiro)                     # Declaração de função com corpo
+sum(x, y: Inteiro)                     # Declaration of function with body
   c = x + y
-  retorne c                             # A última linha tem o valor de retorno
+  retorne c                            # The last line have a value of return
 fim
 
-soma(x, y: Inteiro)                     # Declaração de função com corpo
+sum(x, y: Inteiro)                     # Declaration of function with body
   c = x + y
-  c                                     # A palavra 'retorne' é opcional
+  c                                    # The word "retorno" is optional
 fim
 
-fatorial(n: Inteiro): Inteiro           # Função recursiva (tipo de retorno é obrigatório)
+factorial(n: Inteiro): Inteiro         # Recursive Function (type "retorno" is obligatory
   se n <= 1 então
     1
   senão
-    n * fatorial(n - 1)
+    n * factorial(n - 1)
   fim
 fim
 a = leia_inteiro
-escreva "Fatorial de {a} é {fatorial(a)}"
+escreva "Factorial of {a} is {factorial(a)}"
 
 f(a: Inteiro)
-  g(b: Inteiro) = b * 2                 # Função interna
+  g(b: Inteiro) = b * 2                 # Internal function
   retorne g(a) + 3
 fim
 ````
