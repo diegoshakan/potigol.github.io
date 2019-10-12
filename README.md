@@ -285,9 +285,9 @@ f(a: Inteiro)
 fim
 ````
 
-### Tipo de parâmetros
+### Params Type
 
-| Tipo | Exemplo | Aplicação|
+| Type | Example | Apply|
 | --- | --- | --- |
 | `Inteiro` | `proximo(a: Inteiro) = a + 1 `| `proximo(3)` |
 | `Real`    | `dobro(a: Real) = a * 2` | `dobro(3.6)` |
@@ -296,79 +296,79 @@ fim
 | `Caractere` | `id(c: Caractere) = c` | `id('a')` |
 | `Tupla` | `f(a : (Inteiro, Texto)) = ...` | `f((10,"ok"))` |
 | `Lista` | `soma(a: Lista[inteiro]) = ...` | `soma([1,2,3,4,5])` |
-| Função | `f(g: (Inteiro, Inteiro) => Inteiro) = g(2,3)` | `f((a,b) => a + b)` |
-| Classe ou Registro | `f(a: T) = ...` | `f(T(...))` |
+| `Função` | `f(g: (Inteiro, Inteiro) => Inteiro) = g(2,3)` | `f((a,b) => a + b)` |
+| `Classe ou Registro` | `f(a: T) = ...` | `f(T(...))` |
 
-## Tipos
+## Types
 
-### Número (Inteiro e Real)
+### Numbers (Inteiro e Real (Integer and Float))
 ````scala
-12345.qual_tipo                   # "Inteiro"
+12345.qual_tipo                   # "Inteiro" ("Integer")
 12345.real                        # 12345.0
 12345.texto                       # "12345"
 97.caractere                      # 'a'
 12345 formato "%8d"               # "   12345"
 
-12345.678.qual_tipo               # "Real"
+12345.678.qual_tipo               # "Real" ("Float")
 12345.678.inteiro                 # 12345
 12345.678.texto                   # "12345.678"
 12345.678.arredonde               # 12346
 12345.678.arredonde(2)            # 12345.68
 123.45 formato "%.1f"             # "123.4"
 
-12345.678.piso                    # 12345.0 (arredonda para baixo)
-12345.678.teto                    # 12346.0 (arredonda para cima)
+12345.678.piso                    # 12345.0 (round down)
+12345.678.teto                    # 12346.0 (round up)
 12345.678.inteiro                 # 12345
 ````
 
-### Texto
+### Text
 ````scala
-"abc".qual_tipo                   # "Texto"
+"abc".qual_tipo                   # "Texto" ("Text")
 "123".inteiro                     # 123
 "12abc3".inteiro                  # 12
 "abc".inteiro                     # 0
-"abc"[2]                          # 'b' (caractere na posição 2)
+"abc"[2]                          # 'b' (character index 2)
 
 "12.3".real                       # 12.3
 "12a.3".real                      # 12.0
 "abc".real                        # 0.0
 
-"ab" + "cd"                       # "abcd"  (concatenação)
-"abcb" - "bd"                     # "acb"   (subtração)
+"ab" + "cd"                       # "abcd"  (concatenation)
+"abcb" - "bd"                     # "acb"   (subtraction)
 
 "abc".tamanho                     # 3
-"abc".posição('b')                # 2 (posição de 'b' em "abc")
+"abc".posição('b')                # 2 (position of 'b' in "abc")
 "abc".posição('d')                # 0
-"abc".contém('a')                 # verdadeiro (testa de 'a' está em "abc")
-"abc".contém('d')                 # falso
+"abc".contém('a')                 # verdadeiro (test if 'a' is in "abc")
+"abc".contém('d')                 # falso (false)
 
-"Abc".maiúsculo                   # "ABC"
-"Abc".minúsculo                   # "abc"
-"Abc".inverta                     # "cbA"
-"cab".ordene                      # "abc"
-"abc".junte("-")                  # "a-b-c"
-"abc".junte("[", ", ", "]")       # "[a, b, c]"
+"Abc".maiúsculo                   # "ABC" (uppercase)
+"Abc".minúsculo                   # "abc" (downcase)
+"Abc".inverta                     # "cbA" (reverse)
+"cab".ordene                      # "abc" (sort)
+"abc".junte("-")                  # "a-b-c" (join)
+"abc".junte("[", ", ", "]")       # "[a, b, c]" (join)
 
-"Um texto".divida                 # ["Um", "texto"]
-"Um texto".divida("t")            # ["Um ", "ex", "o"]
-"Um texto".lista                  # ['U', 'm', ' ', 't', 'e', 'x', 't', 'o']
+"A text".divida                 # ["A", "text"] (split)
+"A text".divida("t")            # ["A ", "ex", "o"] (split with args)
+"A text".lista                  # ['A', ' ', 't', 'e', 'x', 't'] (change to list)
 
-"abc".cabeça                      # 'a'  (primeiro caractere de "abc")
-"abc".cauda                       # "bc" ("abc" sem o primeiro caractere)
-"abc".último                      # 'c'  (último caractere de "abc")
-"abcde".pegue(3)                  # "abc" (primeiros 3 caracteres)
-"abcde".descarte(3)               # "de"  (sem os primeiros 3 caracteres)
+"abc".cabeça                      # 'a'  (first character of "abc")
+"abc".cauda                       # "bc" ("abc" without first character)
+"abc".último                      # 'c'  (last character of "abc")
+"abcde".pegue(3)                  # "abc" (3 initial character)
+"abcde".descarte(3)               # "de"  (without 3 initial character)
 
-"abcb".selecione(letra => letra<>'c')          # "abb" ("abcb" sem 'c')
+"abcb".selecione(letra => letra<>'c')          # "abb" ("abcb" without 'c')
 "abc".injete(0)((x,y) => x + y)                # 294   (97 + 98 + 99)
 "abc".injete("")((x,y) => x + "-" + y)         # "-a-b-c"
 
-"abcb".descarte_enquanto(letra => letra<>'c')  # "cb" (descarte caracteres antes de 'c')
-"abcb".pegue_enquanto(letra => letra<'c')      # "ab" (pegue caracteres antes de 'c')
+"abcb".descarte_enquanto(letra => letra<>'c')  # "cb" (remove characters before 'c')
+"abcb".pegue_enquanto(letra => letra<'c')      # "ab" (get characters before 'c')
 
-x = "abc".remova(2)               # x = "ac"  (remove o caractere na posição 2)
-y = "abc".insira(3, 'd')          # y = "abdc" (insere 'd' na posição 2)
-z = "abc".insira(3, "def")        # z = "abdefc" (insere "def" na posição 2)
+x = "abc".remova(2)               # x = "ac"  (remove the character in position 2)
+y = "abc".insira(3, 'd')          # y = "abdc" (add 'd' in position 2)
+z = "abc".insira(3, "def")        # z = "abdefc" (add "def" in position 2)
 ````
 
 ### Lista
